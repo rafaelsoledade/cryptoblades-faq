@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel = "icon" href = "imgs/blades.png" type = "image/x-icon">
+
     <!-- STYLES -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.2.0/css/ionicons.min.css" integrity="sha256-F3Xeb7IIFr1QsWD113kV2JXaEbjhsfpgrKkwZFGIA4E=" crossorigin="anonymous" />
     <!-- Latest compiled and minified CSS -->
@@ -13,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <!-- My CSS -->
     <link rel="stylesheet" href="faq.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <!-- SCRIPTS -->
     <!-- My JS -->
@@ -33,6 +37,10 @@
                 $(this).tab('show');
             });
         });
+
+        $(document).ready(function() {
+          $('#donate').tooltip();
+        });
     </script>
 
   </head>
@@ -47,13 +55,12 @@
 
                         <div class="d-flex align-items-end flex-column" style="height: 200px;">
                           <div class="p-2">
-                            <a href="faq_en.html"><span class="flag-icon flag-icon-us"></span></a>
-                            <a href="faq_en.html"><span class="flag-icon flag-icon-gb"></span></a>
+                            <a href="index.html"><span class="flag-icon flag-icon-us"></span></a>
+                            <a href="index.html"><span class="flag-icon flag-icon-gb"></span></a>
                           </div>
                           <div class="mt-auto p-2">
-                            <a href="https://google.com" target="_blank" class="btn btn-primary">Donate</a>
-
-
+                            <i class="bi bi-info-circle" data-toggle="tooltip" title="Donate some $Skill to the content creators if you're feeling generous! :)" id='donate'></i>
+                            <a href="https://bscscan.com/address/0x5158db329ee4bd909aa5c19c55151bdf194494b2" target="_blank" class="btn btn-info">Donate</a>
                           </div>
                         </div>
 
