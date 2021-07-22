@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 body{
+    background: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+}
+/*body{
     background:#f5f5f6;
     margin-top:20px;
-}
+}*/
+
 /*Faq*/
 
 .faq-banner-wrap {
-    padding: 50px 0 60px;
+    padding: 20px 0 20px;
 }
 
 .faq-banner-wrap .form-group .form-control,
@@ -43,14 +50,17 @@ body{
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -10px;
-    margin-left: -10px;
+    margin-right: -150px;
+    margin-left: -150px;
 }
 
 @media (min-width: 576px){
     .mt-sm-60 {
         margin-top: 60px !important;
     }
+}
+.mt-10 {
+    margin-top: 10px !important;
 }
 .mt-30 {
     margin-top: 30px !important;
