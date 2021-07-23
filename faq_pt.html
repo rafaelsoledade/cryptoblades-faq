@@ -43,6 +43,24 @@
         $(document).ready(function() {
           $('#donate').tooltip();
         });
+
+        $(document).ready(function() {
+          // Initialize
+          // ---------------------------------------------------------------------
+
+          // Tooltips
+          // Requires Bootstrap 3 for functionality
+          $('.js-tooltip').tooltip();
+
+          // Copy to clipboard
+          // Grab any text in the attribute 'data-copy' and pass it to the
+          // copy function
+          $('.js-copy').click(function() {
+            var text = $(this).attr('data-copy');
+            var el = $(this);
+            copyToClipboard(text, el);
+          });
+        });
     </script>
 
   </head>
@@ -77,7 +95,7 @@
                           <span>Guhs#6349</span>
                         </div>
                         <div class="col-sm-8">
-                          <i class="fas fa-donate fa-1x"></i> 
+                          <i class="fas fa-donate fa-1x"></i>
                           Faça a sua doação aos criadores do conteúdo e ajude-nos a melhorar o conteúdo!
                           <button type="button" class="btn btn-default btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="0x5158Db329eE4bd909AA5c19C55151BDf194494B2" title="Clique para copiar o nosso endereço da wallet">
                             <!-- icon from google's material design library -->
