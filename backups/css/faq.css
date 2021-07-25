@@ -37,7 +37,7 @@ body{
     width: 18px;
 }
 .cryptoblades-banner {
-    background-image: url("imgs/banners/cryptoblades_banner.png");
+    background-image: url("../imgs/banners/cryptoblades_banner.png");
     background-size: cover;
 
 }

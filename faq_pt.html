@@ -1,607 +1,606 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Cryptoblades FAQ</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Cryptoblades FAQ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel = "icon" href = "imgs/banners/blades.png" type = "image/x-icon">
+  <link rel = "icon" href = "imgs/banners/blades.png" type = "image/x-icon">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500|Open+Sans">
+<link rel="stylesheet" href="css/faq.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <!-- STYLES -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.2.0/css/ionicons.min.css" integrity="sha256-F3Xeb7IIFr1QsWD113kV2JXaEbjhsfpgrKkwZFGIA4E=" crossorigin="anonymous" />
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Flags lib -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
-    <!-- My CSS -->
-    <link rel="stylesheet" href="faq.css">
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<!-- Flags lib -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
 
-    <!-- SCRIPTS -->
-    <!-- My JS -->
-    <script src="faq.js"></script>
-    <!-- Bootstap bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+	// Add minus icon for collapse element which is open by default
+	$(".collapse.show").each(function(){
+		$(this).prev(".card-header").addClass("highlight");
+	});
 
-    <script>
-        $(document).ready(function(){
-            $("#categories a").click(function(e){
-                e.preventDefault();
-                $(this).tab('show');
-            });
-        });
+	// Highlight open collapsed element
+	$(".card-header .btn").click(function(){
+		$(".card-header").not($(this).parents()).removeClass("highlight");
+		$(this).parents(".card-header").toggleClass("highlight");
+	});
+});
+</script>
+</head>
+<body>
 
-        $(document).ready(function() {
-          $('#donate').tooltip();
-        });
 
-        $(document).ready(function() {
-          // Initialize
-          // ---------------------------------------------------------------------
+<header> <img src="imgs/banners/cryptoblades_banner.png" alt="ROI" style='height: 100%; width: 100%; object-fit: contain'> </header>
 
-          // Tooltips
-          // Requires Bootstrap 3 for functionality
-          $('.js-tooltip').tooltip();
+<div class="container-lg">
+	<div class="row">
+    <div class="col-xl-12 pa-0">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+          <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+              <ul class="navbar-nav mr-auto">
 
-          // Copy to clipboard
-          // Grab any text in the attribute 'data-copy' and pass it to the
-          // copy function
-          $('.js-copy').click(function() {
-            var text = $(this).attr('data-copy');
-            var el = $(this);
-            copyToClipboard(text, el);
-          });
-        });
-    </script>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#headingOne">Começar</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#headingThree">Personagens</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#headingSix">Combates</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#headingTen">Rewards e Balance</a>
+                  </li>
 
-  </head>
-  <body>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#headingFourteen">Erros Comuns</a>
+                  </li>
 
-    <div class="container-fluid">
-        <!-- Row -->
-        <div class="row">
-            <div class="col-xl-12 pa-0">
-                <div class="faq-banner-wrap cryptoblades-banner">
-                    <div class="container">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#headingFifteen">Glossário</a>
+                  </li>
+              </ul>
+          </div>
 
-                        <div class="d-flex align-items-end flex-column" style="height: 170px;">
-                          <div class="p-2">
-                            <a href="index.html"><span class="flag-icon flag-icon-us" style='font-size:24px'></span></a>
-                            <a href="index.html"><span class="flag-icon flag-icon-gb" style='font-size:24px'></span></a>
-                          </div>
-                        </div>
+          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
 
-                    </div>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+
+                  <a class="fab fa-discord nav-link">zannie#9961</a>
+                  <a class="fab fa-discord nav-link">Guhs#6349</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                </li>
+                  <li class="nav-item">
+                    <a href="index.html"><span class="flag-icon flag-icon-us" style='font-size:24px'></span></a>
+                    <a href="index.html"><span class="flag-icon flag-icon-gb" style='font-size:24px'></span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+
+
+
+    <div class="col-lg-12">
+      <br>
+      <i class="fas fa-donate fa-1x"></i>
+      <a href="https://bscscan.com/address/0x5158db329ee4bd909aa5c19c55151bdf194494b2" target="_blank">Clique aqui para fazer a sua doação aos criadores do conteúdo e ajude-nos a melhorar!!</a>
+
+			<h1 class="page-title">Cryptoblades FAQs</h1>
+
+      <!-- Category 1 -->
+      <div class="accordion" id="accordionExample">
+				<div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="clearfix mb-0"> Metamask e Token Skill </h2><p>
+            <h2 class="clearfix mb-0">
+							<a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="fa fa-chevron-circle-down"></i> Quanto preciso gastar para começar a jogar?</a>
+						</h2>
+					</div>
+					<div id="collapseOne" class="collapse" aria-labelledby="headingOne" >
+						<div class="card-body">
+              Para começar a jogar Cryptoblades, você pode escolher uma das seguintes estratégias de compra:
+              <ol>
+                <p><li>Baixo orçamento (1,5 Skill) - Ótimo para começar. Se for a sua primeira vez no jogo, você pode recrutar um personagem + arma por 1,5 de Skill. Se você já recrutou antes, o recrutamento só lhe dará um novo personagem.</li>
+                <p><li>Marketplace (5-7 Skill) - Boa abordagem se você quiser economizar algum Skill nos personagens, que ficam a custar cerca de 0,5 Skill, e usar esse montante para comprar uma arma decente de 3/4 estrelas (cada uma vendida por cerca de 4-6 Skill).
+                <p> Lembre-se de que sua arma e seu personagem devem ser do mesmo Elemento para se obter máxima eficiência em batalha (mais sobre isso adiante).</li>
+                <p><li>Setup com vários personagens - Considerando que você pode ter até 4 personagens por conta e 4 contas, você pode ter no máximo 16 personagens. Portanto, basta multiplicar o orçamento inicial acima pelo número de personagens que você deseja ter (e como todos os personagens podem usar a mesma arma não é necessário comprar 4 armas!).
+                  <p> Lembre-se ... quanto mais personagens você tiver, maior e mais rápido será o seu retorno.
+                </li>
+
+              <p><li>
+                Uma média de USD$0,22 é gasta por batalha, até um máximo de 7 batalhas por dia/personagem, o que significa um gasto diário de
+                 USD$1,54 para um caractere ou USD$6,16 para 4 caracteres, por dia e assim por diante. Estes custos de gás são automaticamente pagos em BNB via wallet.
+              <p>
+                Cada personagem tem no máximo 200 stamina, e para fazer uma batalha é necessário consumir 40 stamina. A stamina
+                recupera a uma taxa de 1 ponto a cada 5 minutos, o que significa que a cada 3h20m é possível lutar novamente.
+                <p> Abaixo temos um cenário de simulação de potenciais ganhos mensais, para 1 conta com 4 personagens:
+                  <figure>
+                    <br><br><img src="imgs/getting_started/roi.png" alt="ROI" style='height: 100%; width: 100%; object-fit: contain'><br><br>
+                    <figcaption>Fig.1 - Exemplo de retorno previsto para 1 conta com 4 personagens.</figcaption>
+                  </figure>
+              </li>
+              </div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-header" id="headingTwo">
+						<h2 class="mb-0">
+							<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fa fa-chevron-circle-down"></i> Como começar? </a>
+						</h2>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" >
+						<div class="card-body">
+              Para jogar Cryptoblades você ira precisar de alguns tokens de Skill para gastar no jogo, e esses tokens podem ser comprados com BNB.
+
+                Para isso, basta seguir estas etapas:
+              <ol>
+                <p><li>Crie a sua conta na <a href="https://metamask.io/" target="_blank">Metamask</a> e instale a respetiva extensão no browser.</li></a>
+                <p><li>As carteiras Metamask, por predefinição, estão configuradas para a rede Ethereum, portanto, é necessário configurá-las para aceitarem também tokens BEP-20 (Binance). Para fazer isso, basta seguir
+                 <a href="https://docs.binance.org/smart-chain/wallet/metamask.html" target="_blank">estas instruções</a>.</li>
+                 <p>
+                O resultado final deverá mostrar algo como isto:
+                <figure>
+                  <br><br><img src="imgs/getting_started/bsc_metamask.png" alt="Metamask BSC"><br><br>
+                  <figcaption>Fig.2 - Binance Smart Chain corretamente configurada e disponível na Metamask.</figcaption>
+                </figure>
+
+                 <p><li>
+                  Crie uma conta Binance, adquira algum BNB ao fazer a troca do FIAT que depositou (ou troque por outra criptomoeda, como preferir) e retire a quantia que deseja para a sua carteira Metamask. Certifique-se de que copia o seu endereço corretamente!
+                  <figure>
+                    <br><br><img src="imgs/getting_started/metamask_address.png" alt="Metamask Address" style='height: 100%; width: 100%; object-fit: contain'><br><br>
+                    <figcaption>Fig.3 - Aqui é possível conferir e copiar o endereço da wallet no Metamask.</figcaption>
+                  </figure>
+                </li>
+                <p><li>
+                  Finalmente, é hora de trocar Skill na <a href="https://app.apeswap.finance/swap?outputCurrency=0x154a9f9cbd3449ad22fdae23044319d6ef2a1fab" target="_blank">Swap | ApeSwap</a> (que é uma Decentralized Exchange, ou DEX)
+                  por BNB para o que valor pretendido (e.g. fazer a troca de 2 BNB para 7 Skill).
+                  <p>Por exemplo, se você tem 2 BNB em sua carteira, troque cerca de 1,8 para $ Skill e deixe 0,2 BNB, o que deve ser suficiente para cerca de 2 semanas de jogo (para 1 conta com 4 personagens).
+                  <p><p>
+                  <figure>
+                    <br><br><img src="imgs/getting_started/apeswap.png" alt="Apeswap"><br><br>
+                    <figcaption>Fig.4 - Ecrã de troca (swap) de BNB por Skill.</figcaption>
+                  </figure>
+
+                  É muito importante ter em consideração que cada ação dentro do jogo (comprar personagem, vender arma, lutar, etc.) é uma transação no blockchain Binance, o que significa que é necessário deixar uma quantia de BNB na sua carteira Metamask para pagar as gas fees associadas, que são em média de USD$0,22 / transação.
+
+                  <br><br><figure>
+                    <img src="imgs/getting_started/transaction_examples.png" alt="Tx Example"><br><br>
+                    <figcaption>Fig.5 - Exemplo de uma lista de transacções.</figcaption>
+                  </figure><br><br>
+
+                  <p><p> Dica do amigo - antes de aprovar a sua transacção na BSC, altere o Gas Limit para 200000. Isto vai fazer com que pague metade do gas fee!
+
+                  <figure>
+                    <img src="imgs/getting_started/gas_fees.png" alt="Save Gas Fees"><br><br>
+                    <figcaption>Fig.6 - Não se esqueça de alterar o Gas Limit para poupar algum dinheiro!</figcaption>
+                  </figure><br><br>
+
+                  </li>
+                <p><li>
+                  É possível ter 4 personagens por conta no Metamask, até um máximo de 4 contas por carteira Metamask. Isso torna possível ter 16 personagens no jogo (4 personagens em cada 4 contas).
+                  <figure>
+                    <br><br><img src="imgs/getting_started/metamask_accounts.png" alt="Metamask Accounts"><br><br>
+                    <figcaption>Fig.7 - No ícone superior direito do ecrã principal da Metamask é possível consultar as contas existentes e criar novas contas.</figcaption>
+                  </figure>
+                  </li>
+                <p><li>
+                  Oh não! Acabei de fazer troca de BNB por Skill mas não vejo os novos tokens na minha carteira...e agora?
+                  <p>Calma, ainda falta adicionar o token da Cryptoblades através da opção "Add Token", na Metamask, através do <a href="https://www.coingecko.com/en/coins/cryptoblades" target="_blank">contract id</a>.</li>
+                  <figure>
+                    <br><br><img src="imgs/getting_started/add_token.png" alt="Add Token" style='height: 100%; width: 100%; object-fit: contain'><br><br>
+                    <figcaption>Fig.8 - Adicionar novos token na wallet Metamask.</figcaption>
+                  </figure>
+
+                  </li>
+              </ol>
+            </div>
+					</div>
+				</div>
+			</div> <!-- End of Category 1-->
+
+
+      <!-- Category 2 -->
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <p><p><h2 class="clearfix mb-0"> Mecânica de Personagem </h2><p>
+            <h2 class="clearfix mb-0">
+              <a class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fa fa-chevron-circle-down"></i> Como posso comprar personagens? </a>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" >
+            <div class="card-body">
+
+              Depois de ter Skill suficiente na sua carteira virtual, você pode começar a jogar  <a href="https://app.cryptoblades.io/#/" target="_blank">Cryptoblades</a></li>.
+              <p> Assim que entrar no jogo, terá a opção de criar um personagem por algum valor Skill, e caso seja a sua primeira vez no jogo, irá receber o bónus de alguma campanha promocional disponível (por exemplo, poderá receber $30 em Skill para compras in-game, 5 Skill, etc ...). As promoções do jogo são pagas em saldo in-game, que só pode ser usado para forjar armas ou recrutar novos personagens.
+               <p> Outra alternativa é comprar diretamente no Marketplace (considerar isto com sendo uma compra de ativo de segunda mão). Uma maneira de otimizar os seus custos é criar o primeiro personagem no menu Plaza para ganhar seu saldo promocional no jogo e comprar quaisquer outros ativos diretamente do Marketplace. Certifique-se de que os seus personagens e armas são todos do mesmo elemento ... vamos falar em detalhe disso mais adiante.
+                <figure>
+                  <br><br><img src="imgs/char_mechanics/recruit_char.png" alt="Recruit Character" style='height: 100%; width: 100%; object-fit: contain'><br><br>
+                  <figcaption>Fig.9 - Recrutar novos personagens no menu Plaza.</figcaption>
+                </figure><br><br>
+
+                <figure>
+                  <br><br><img src="imgs/char_mechanics/forge_weapon.png" alt="Forge Weapon"><br><br>
+                  <figcaption>Fig.10 - Forjar uma nova arma no menu Blacksmith.</figcaption>
+                </figure><br><br>
+                <figure>
+                  <br><br><img src="imgs/char_mechanics/marketplace.png" alt="Marketplace" style='height: 100%; width: 100%; object-fit: contain'><br><br>
+                  <figcaption>Fig.11 - O Marketplace terá esta aparência.</figcaption>
+                </figure><br><br>
+
+            </div>
+          </div>
+          </div>
+          <div class="card">
+          <div class="card-header" id="headingFour">
+            <h2 class="mb-0">
+              <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="fa fa-chevron-circle-down"></i> Com quantos personagens eu devo começar? </a>
+            </h2>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" >
+            <div class="card-body">
+              Existem 4 elementos no jogo: Água, Terra, Fogo e Elétrico. Cada elemento tem uma vantagem sobre o outro, conforme mostrado na imagem abaixo:
+              <figure>
+                <br><br><img src="imgs/char_mechanics/elements.png" alt="Game Elements"><br><br>
+                <figcaption>Fig.12 - Como cada elemento tem vantagem sobre outro.</figcaption>
+              </figure><br><br>
+
+              Se você escolher todos os personagens do mesmo elemento, poderá usar a mesma arma para todos, otimizando assim as suas chances de ganhar batalhas e seu custo / retorno. Quanto mais personagens você tiver, maior será o seu retorno. Abaixo está um exemplo da diferença entre ter 1 personagem ou 4 personagens por dia no nível 1 com uma arma de 4 estrelas, considerando a cotação de $ Skill de $ 34,96.
+              <figure>
+                <br><br><img src="imgs/char_mechanics/earnings_calc.png" alt="Earnings Calculator" style='height: 100%; width: 100%; object-fit: contain'><br><br>
+                <figcaption>Fig.13 - O simulador oficial do jogo para cálculo de ganhos.</figcaption>
+              </figure><br><br>
+
+              Cada personagem e arma é um NFT, portanto, ao verificar a sua carteira verá que existe um token com o nome CBC ou CBW. Se você tiver 4 personagens, irão aparecer 4 CBC. Se vender qualquer um dos seus personagens, os seus tokens CBC diminuem em 1 e o valor pelo qual foi vendido reverte para sua carteira como token Skill.
+            </div>
+          </div>
+          </div>
+
+          <div class="card">
+          <div class="card-header" id="headingFive">
+            <h2 class="mb-0">
+              <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><i class="fa fa-chevron-circle-down"></i>  Quanto de XP preciso para subir de nível? </a>
+            </h2>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" >
+            <div class="card-body">
+              É possível verificar a escada de níveis e XP <a href="https://docs.google.com/spreadsheets/d/1k3TZUTviY7DH7y4iqaVVuolHwi4GnGF7uudOxcLKUUc/edit#gid=0" target="_blank">aqui</a>.
+              Para evitar custos desnecessários, recomendo fazer o CLAIM de XP apenas quando os personagens tiverem XP suficiente para subir do nível 1 para 11, 11 para 21, 21 para 31, etc, porque apenas a cada 10 níveis seu poder aumenta em 1000, e cada 1000 de poder significa um bónus extra por vitória na batalha. Basta clicar no nome do seu personagem conforme mostrado abaixo para CLAIM XP para todos os personagens ao mesmo tempo. Novamente, para otimizar os gastos, certifique-se de que todos os personagens tenham XP suficiente para subir de nível para o próximo nível +10.
+              <figure>
+                <br><br><img src="imgs/char_mechanics/xp_bar.png" alt="XP Bar"><br><br>
+                <figcaption>Fig.14 - A barra de XP, onde poderá subir de nível os seus personagens. Lembre-se de que fazer CLAIM do seu XP aumentará o nível de todos os personagens!</figcaption>
+              </figure>
+
+              <figure>
+                <br><br><img src="imgs/char_mechanics/power.png" alt="Power"><br><br>
+                <figcaption>Fig.15 - Power de cada personagem.</figcaption>
+              </figure><br><br>
+
+              O poder do seu inimigo será dimensionado de acordo com o seu poder + arma. Ao fazer CLAIM da XP e subir de nível, o seu personagem ficará mais forte, mas os seus inimigos também. O mesmo se aplica se você comprar uma arma melhor.
+            </div>
+          </div>
+          </div>
+
+        </div><!-- End of Category 2-->
+
+        <!-- Category 3 -->
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <p><p><h2 class="clearfix mb-0"> Mecânicas de Batalha </h2><p>
+              <h2 class="clearfix mb-0">
+                <a class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"><i class="fa fa-chevron-circle-down"></i> Como posso otimizar as minhas batalhas? </a>
+              </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" >
+              <div class="card-body">
+
+                Quando fizer uma batalha, você irá escolher o seu personagem e a sua arma. Depois, serão apresentados 4 inimigos com poder e elemento aleatórios. A XP que cada combate dá varia entre 28 e 34, dependendo da dificuldade da luta.
+                <figure>
+                  <img src="imgs/battle_mechanics/choose_weapon.png" alt="XP Bar"><br><br>
+                  <figcaption>Fig.16 - Escolha a arma com que vai lutar. Lembre-se de juntar armas e personagens do mesmo elemento!</figcaption>
+                </figure>
+
+                <figure>
+                  <img src="imgs/battle_mechanics/battle.png" alt="Power"  style='height: 100%; width: 100%; object-fit: contain'><br><br>
+                  <figcaption>Fig.17 - Hora da porrada!!</figcaption>
+                </figure><br><br>
+
+                <p>Cada batalha é uma transação na BSC, com um custo médio do gás de US$0,22. A gas fee é constante, independentemente do resultado da batalha, então você irá sempre gastar $0,22, quer ganhe ou não. É mais lucrativo escolher sempre as batalhas com maior chance de vitória e não necessariamente aquelas com maior retorno de XP.
+                <p>
+                  Utilize este <a href="https://wax-dapps.site/crypto-blades/combat" target="_blank">simulador</a> para ter uma ideia da estimativa de percentagem de vitória ou derrota de cada batalha. Se a sua arma não tiver Weapon Bonus Power ou Stat 3 power, coloque o valor em 0.
+                  <p> Se os 4 inimigos gerados forem muito fortes ou você não tiver uma boa chance de vitória, espere até a próxima hora passar para que novos (e potencialmente mais acessíveis) inimigos sejam aleatoriamente gerados e listados (por exemplo, são 14h30, os 4 inimigos gerados colocam-me em combates que não me favorecem e a chance de ganhar é inferior a 90%. É só esperar até as 15h e 4 novos combates estarão disponíveis). É recomendável escolher batalhas com chance de vitória maior do que 90%, para maior lucratividade.
+
+              </div>
+            </div>
+            </div>
+            <div class="card">
+            <div class="card-header" id="headingSeven">
+              <h2 class="mb-0">
+                <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"><i class="fa fa-chevron-circle-down"></i> Que arma devo escolher para a batalha? </a>
+              </h2>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" >
+              <div class="card-body">
+
+                Para otimizar o seu poder de combate, o personagem e a arma devem ser do mesmo elemento. Se passar o cursor sobre a arma, verá as suas estatísticas completas.
+                 <p> No exemplo abaixo, vemos que o elemento é terra e tem atributos extras de DEX (terra) e STR (fogo). O seu poder de batalha aumentará se a arma em questão tiver qualquer um dos atributos que sejam o mesmo que o elemento da arma e do seu personagem.
+
+                <figure>
+                  <img src="imgs/battle_mechanics/weapon_1.png" alt="Weapon"><br><br>
+                  <figcaption>Fig.18 - Exemplo para uma arma Terra de 4 estrelas.</figcaption>
+                </figure><br><br>
+
+                <p>O poder do seu inimigo terá um valor aleatório baseado em quanto poder o seu personagem tem, então se o seu personagem usar uma arma mais forte, o inimigo gerado será mais forte mas sua recompensa também será melhor.
+                <p>
+                O algoritmo que calcula o poder do seu personagem é basedo na seguinte formula:
+                <figure>
+                  <img src="imgs/battle_mechanics/combat_formula.png" alt="Battle Formula"><br><br>
+                  <figcaption>Fig.19 - Este é  algoritmo que determina a sua chance de vitória.</figcaption>
+                </figure><br><br>
+                <p>
+                Por outras palavras, é muito importante que o par arma + personagem representem o mesmo elemento. Se um dos atributos da arma também for do mesmo elemento, será multiplicado por 1,07, caso contrário, será multiplicado por 1.
+                <p>
+                Para uma arma de 4 estrelas que possua 2 atributos, garanta que tem o mesmo atributo da arma com um valor o mais alto possível. Como a potência multiplica por 1,03 e qualquer elemento diferente do seu será multiplicado por 1, procure aquele com o maior valor e o melhor preço (por exemplo, 300 potência x 1,03 = 309 e 300 fogo x 1 = 300, então eles terão o mesmo impacto se o atributo de fogo for 309, para este exemplo).
+                <p>
+                A mesma fórmula aplica-se a armas de 3 estrelas e armas de 5 estrelas, que têm 1 e 3 atributos, respectivamente.
+                <p>
+                Para forjar uma arma, vá até ao menu Blacksmith e clique em Forge. O custo é de 0,22 Skill e qualquer arma de 1 a 5 estrelas pode vir com as seguintes probabilidades:
+                <figure>
+                  <img src="imgs/battle_mechanics/forge_percentages.png" alt="Forge Percentages"><br><br>
+                  <figcaption>Fig.20 - Probabilidades de se obter uma arma.</figcaption>
+                </figure><br><br>
+                <p>
+                Assim, você pode gastar dinheiro forjando a sua própria e tentar a sorte ou então ir ao Marketplace e comprar alguma arma mais cara, mas que seja adequada ao seu personagem.
+                <p>
+                Cada arma é um NFT, e ao abrir a sua carteira verá que tem um token chamado CBW. Se você tiver 4 armas, irão aparecer 4 CBW. Caso venda uma arma, ficará com 3 CBW e a quantia pela qual ela for vendida será revertida em Skill, na sua wallet.
+
+              </div>
+            </div>
+            </div>
+
+            <div class="card">
+            <div class="card-header" id="headingEight">
+              <h2 class="mb-0">
+                <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight"><i class="fa fa-chevron-circle-down"></i>  Tenho uma arma de 3 estrelas, devo comprar uma de 4 estrelas? </a>
+              </h2>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" >
+              <div class="card-body">
+
+                Para saber se vale a pena ou não, terá de fazer algumas simulações usando a "Earnings Calculator" do jogo, que simula os ganhos no jogo utilizando uma arma de 3 estrelas, e compará-lo com o que você ganharia por uma 4 estrelas arma.
+
+                <figure>
+                  <img src="imgs/battle_mechanics/milestone.png" alt="Milestone"><br><br>
+                  <figcaption>Fig.21 - Rendimento extra previsto para o próximo milestone level (que é a cada 10 níveis).</figcaption>
+                </figure><br><br>
+
+                Abaixo é apresentada uma simulação, onde é possível verificar um lucro estimado de $144,27 caso todos os combates sejam ganhos. <p>
+
+                <figure>
+                  <img src="imgs/battle_mechanics/earnings_calc2.png" alt="Earnings Calculator 2" style='height: 100%; width: 100%; object-fit: contain'><br><br>
+                  <figcaption>Fig.22 - Exemplo de simulação combatendo com uma arma de 3 estrelas com o mesmo elemento e atributo extra do personagem (neste caso, INT).</figcaption>
+                </figure><br><br>
+
+                Para saber se vale a pena comprar uma arma 4 estrelas, repita a simulação e veja quanto mais ficará a ganhar por dia.
+                <p> Neste exemplo, temos um lucro estimado de $ 161,96, caso todas as partidas diárias sejam ganhas, o que levará a um aumento de $17,69 no lucro. Tenha em consideração, por exemplo, que uma arma de 4 estrelas custa em média 7 Skill, que na taxa de conversão atual seria em torno de $315,98, e que esse valor seria devolvido com ganhos em cerca de 17 dias. Porém, e dado que a quantidade de recompensa por batalha deve aumentar com as subidas de nível, o break-even poderá até chegar mais cedo do que o previsto.
+
+                <figure>
+                  <img src="imgs/battle_mechanics/earnings_calc3.png" alt="Earnings Calculator 3" style='height: 100%; width: 100%; object-fit: contain'><br><br>
+                  <figcaption>Fig.23 - Mesma simulação para uma arma de 4 estrelas.</figcaption>
+                </figure>
+
+              </div>
+            </div>
+            </div>
+
+            <div class="card">
+            <div class="card-header" id="headingNine">
+              <h2 class="mb-0">
+                <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine"><i class="fa fa-chevron-circle-down"></i>  Como posso melhorar a minha arma? </a>
+              </h2>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" >
+              <div class="card-body">
+
+                Para melhorar uma arma, é possível reforjar uma arma mais fraca para otimizar qualquer outra arma de sua preferência. Para isso, basta clicar na arma que deseja melhorar, clicar em Reforjar e escolher a arma que deseja destruir. A arma escolhida será destruída para que a arma de sua escolha receba um aumento de poder, que aparecerá em Bonus Power.
+                <p>
+                Cada arma tem até 100 pontos LB a serem adicionados para armas de 1 a 3 estrelas. Cada arma de 1 estrela e 2 estrelas que será destruída adiciona 1 LB, e uma arma de 3 estrelas adiciona 2 LB. Cada LB adiciona 15 pontos de poder à arma, até um total de 1500 bônus de poder. Uma arma de 4 estrelas, quando destruída para melhorar uma nova arma, pode render até 25 4LB, e cada 4LB adiciona 30 pontos até um total de 750 de poder de bônus. Uma arma de 5 estrelas, quando destruída para melhorar uma nova arma, pode render até 10 5LB, e cada 5LB adiciona 60 pontos até um total de 600 de bônus de poder.
+                <figure>
+                  <img src="imgs/battle_mechanics/reforge.png" alt="Refoge" style='height: 100%; width: 100%; object-fit: contain'><br><br>
+                  <figcaption>Fig.24 - O ecrã de Reforge.</figcaption>
+                </figure>
+
+              </div>
+            </div>
+            </div>
+
+          </div><!-- End of Category 3-->
+
+          <!-- Category 4 -->
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingTen">
+                <p><p><h2 class="clearfix mb-0"> Mercado, Recompensas e Staking </h2><p>
+                <h2 class="clearfix mb-0">
+                  <a class="btn btn-link" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen"><i class="fa fa-chevron-circle-down"></i> Como gerir minha Skill no balanço e recompensas?</a>
+                </h2>
+              </div>
+              <div id="collapseTen" class="collapse" aria-labelledby="headingTen" >
+                <div class="card-body">
+
+                  O montante que você comprar em SKILL através do APESWAP vai ficar no Total Balance. Entretanto também temos os montantes SKILL IN GAME, que são os valores que pode ganhar fazendo o STAKE do valor que vai receber por cada batalha e do qual ainda não foi feito o CLAIM.
+                  <figure>
+                    <img src="imgs/rewards/total_balance.png" alt="Total Balance"><br><br>
+                    <figcaption>Fig.25 - O Balance total.</figcaption>
+                  </figure>
+                  Para todas as batalhas que vencer, este montante de recompensa vai ser aumentado. Esse montante não pode ser utilizado para compra ou venda até ser feito o CLAIM do seu valor.
+
+                  <figure>
+                    <img src="imgs/rewards/rewards.png" alt="Rewards"><br><br>
+                    <figcaption>Fig.26 - Os ganhos por cada batalha estão visíveis na secção de Rewards.</figcaption>
+                  </figure>
+
+                  Caso queira retirar esse montante, vai ter de pagar uma taxa inicial de 15%, que vai diminuindo 1% a cada dia. De forma a maximizar o retorno, deverá fazer levantamentos de 2 em 2 semanas, para não pagar taxa.
+                  <p>
+                  Uma outra alternativa é fazer o STAKE por 7 dias de algum desses montantes e receber 10% IN GAME SKILL, que fica disponível de imediato. O valor que colocar no STAKE não pode ser utilizado nesses 7 dias, e apenas poderá fazer STAKE do montante de Skill que tem em Rewards e não o que tem balance!
+
+                  <figure>
+                    <img src="imgs/rewards/staking.png" alt="Staking"><br><br>
+                    <figcaption>Fig.27 - A opção Staking.</figcaption>
+                  </figure>
+
+                  Para isso basta selecionar a opção do meio “SKILL FOR SKILL” e depois colocar em “STAKE ALL OF UNCLAIMED REWARDS”
+
+                  <figure>
+                    <img src="imgs/rewards/staking_2.png" alt="Staking"><br><br>
+                    <figcaption>Fig.28 - Façam stake dos vossos ganhos e aproveitem os 10% disponibilizados de imediato!</figcaption>
+                  </figure>
+
+                  A partir do primeiro STAKE vai ser contado os 7 dias de bloqueio. É aconselhável apenas fazer mais um STAKE no último dia da contagem para economizar gas fees (e.g. fiz o STAKE desses 10.58 SKILL agora, um contador de 7 dias vai começar. No dia seguinte tenho mais 4 SKILL para fazer CLAIM e quero ganhar +10% de SKILL IN GAME. Não é preciso fazer o STAKE neste momento, o melhor é juntar pelos próximos 6 dias e fazer mais um único aporte de STAKE de uma única vez. O relógio de contagem de 7 dias não vai ser zerado, é sempre 7 dias a partir do primeiro STAKE que foi feito).
+                  <p>
+                  Depois desses 7 dias, ao fazer UNSTAKE todo esse montante vai direto para seu BALANCE sem pagar nenhuma taxa.
+
+                </div>
+              </div>
+              </div>
+              <div class="card">
+              <div class="card-header" id="headingEleven">
+                <h2 class="mb-0">
+                  <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven"><i class="fa fa-chevron-circle-down"></i> Por quanto vendo uma arma? </a>
+                </h2>
+              </div>
+              <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" >
+                <div class="card-body">
+
+                  A melhor forma de saber isso é indo ao Marketplace e procurando por armas que sejam parecidas com a sua, pois os valores vão ser alterados de acordo com oferta e demanda.
+
+                </div>
+              </div>
+              </div>
+
+              <div class="card">
+              <div class="card-header" id="headingTwelve">
+                <h2 class="mb-0">
+                  <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve"><i class="fa fa-chevron-circle-down"></i>  Como posso vender uma arma ou personagem? </a>
+                </h2>
+              </div>
+              <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" >
+                <div class="card-body">
+
+                  Para vender uma arma tens de ir ao mercado e clicar em List NFTs. Depois disso basta clicar na arma que queira vender e colocar o valor Ex: 3.50 (Não pode usar vírgula). Caso queira alterar o valor ou cancelar a venda, basta ir em Search NFTs e colocar o ID da sua arma (apenas o número). Caso não saiba o ID basta ir no <a href="https://bscscan.com/">BSCScan</a>, colocar o seu endereço e por em CBW que vai ter todas as suas armas.
+
+                </div>
+              </div>
+              </div>
+
+              <div class="card">
+              <div class="card-header" id="headingThirteen">
+                <h2 class="mb-0">
+                  <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen"><i class="fa fa-chevron-circle-down"></i>  Posso enviar arma ou personagem para outra conta minha ou de um amigo? </a>
+                </h2>
+              </div>
+              <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" >
+                <div class="card-body">
+
+                  Sim, basta utilizar <a href="https://www.bscscan.com/address/0xc6f252c2cdd4087e30608a35c022ce490b58179b#writeProxyContract">esse link</a> e clicar no Connect to web3 para fazer a ligação com sua carteira.
+                  <figure>
+                    <img src="imgs/rewards/web3_connect.png" alt="Web 3 Connect"><br><br>
+                    <figcaption>Fig.29 - A interface web3.</figcaption>
+                  </figure>
+                  Depois disso basta ir ao formulário 12 e colocar o endereço de quem está enviando o personagem, o endereço de quem vai receber, e por fim o ID do personagem que você quer enviar. Para funcionar, a carteira que vai estar conectada a esse site tem de ser a conta do personagem na Metamask. Importante ter em consideração que cada conta pode ter, no máximo, 4 personagens, logo, se for feito o envio de um personagem para uma conta que ja esteja cheia, esse NFT ficará perdido para sempre. Também ter em atenção se o personagem em questão não está bloqueado para transferência pelo período de 24 horas.
+                  <p>
+                  Para transferir arma o <a href="https://www.bscscan.com/address/0x7e091b0a220356b157131c831258a9c98ac8031a#writeProxyContract">link é esse</a> e o formulário é o 13 e é preciso pôr o seu endereço, o endereço de quem vai receber e o ID da arma. Também ter em atenção se a arma em questão não está bloqueada para transferência pelo período de 24 horas.
+
+                </div>
+              </div>
+              </div>
+
+            </div><!-- End of Category 4-->
+
+            <!-- Category 5 -->
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingFourteen">
+                  <p><p><h2 class="clearfix mb-0"> Erros Comuns </h2><p>
+                  <h2 class="clearfix mb-0">
+                    <a id="category5" class="btn btn-link" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen"><i class="fa fa-chevron-circle-down"></i> Obtive um erro durante a transação, que devo fazer? </a>
+                  </h2>
+                </div>
+                <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" >
+                  <div class="card-body">
+
+                    Caso apareça essa mensagem, cancele a transação porque algo de errado aconteceu.
+
+                    <figure>
+                      <img src="imgs/common_errors/tx_error.png" alt="Transaction Error"><br><br>
+                      <figcaption>Fig.30 - Cuidado, não é suposto pagar tanto for gas fees...</figcaption>
+                    </figure><br><br>
+
+                    <p>Esse erro pode acontecer por vários motivos:
+                    <p>
+                      <ul>
+                        <li>Está a tentar comprar um personagem ou arma que já foi comprada no marketplace</li>
+                        <li>Está a tentar transferir personagem ou arma e colocar erradamente o ID </li>
+                        <li>Está a tentar transferir de uma carteira que não seja sua</li>
+                        <li>Está a tentar vender uma arma ou personagem num período menor de 24 horas depois de ter comprado</li>
+                      </ul>
+                      <p>
+
+                  </div>
+                </div>
                 </div>
 
-                <!-- Social media and Donations -->
-                <div class="container mt-sm-60 mt-10">
-                    <div class="hk-row">
-                        <div class="col-sm-2">
-                          <i class="fab fa-discord fa-2x" style="color:blue"></i>
-                          <span>zannie#9961</span>
-                        </div>
-                        <div class="col-sm-2">
-                          <i class="fab fa-discord fa-2x" style="color:blue"></i>
-                          <span>Guhs#6349</span>
-                        </div>
-                        <div class="col-sm-8">
-                          <i class="fas fa-donate fa-1x"></i>
-                          Faça a sua doação aos criadores do conteúdo e ajude-nos a melhorar!
-                          <button type="button" class="btn btn-default btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="0x5158Db329eE4bd909AA5c19C55151BDf194494B2" title="Clique para copiar o nosso endereço da wallet">
-                            <!-- icon from google's material design library -->
-                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M17,9H7V7H17M17,13H7V11H17M14,17H7V15H14M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z" /></svg>
-                          </button>
-                        </div>
+
+              </div><!-- End of Category 5-->
+
+              <!-- Category 6 -->
+              <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingFifteen">
+                    <p><p><h2 class="clearfix mb-0"> Glossário e Conceitos-Chave </h2><p>
+                    <h2 class="clearfix mb-0">
+                      <a class="btn btn-link" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen"><i class="fa fa-chevron-circle-down"></i> Glossary and Key Concepts </a>
+                    </h2>
+                  </div>
+                  <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" >
+                    <div class="card-body">
+
+                      <ul>
+                        <li>Wallet - A wallet é um endereço online seguro onde todas as suas criptomoedas serão armazenadas. Para jogar Cryptoblades, precisará de ter em carteira BNB (a criptomoeda usada para pagar as gas fees na Binance Smart Chain) e de Skill (a moeda do jogo).</li>
+                        <li>Fiat - Moeda emitida por governos centrais (e.g. Euro, USD, BRL, etc..)</li>
+                        <li>Metamask - Ferramenta que permite aos utilizadores armazenar e gerenciar chaves de contas, transmitir transações, enviar e receber criptomoedas e tokens baseados em blockchain, assim como conectar-se com segurança a aplicativos descentralizados por meio de um browser compatível ou do browser integrado do aplicativo móvel.</li>
+                        <li>Binance Smart Chain (BSC) - Implementação Blockchain da Binance, onde ocorrerão todas as transações entre os endereços de wallets.</li>
+                        <li>Decentralized Exchange (DEX) - Uma Decentralized Exchange é um mercado ponto a ponto (P2P) que conecta compradores e vendedores de criptomoedas. O que isso significa é que você pode trocar / comprar uma criptomoeda amplamente usada por outra que foi registada por, digamos, outra emitida por uma entidade menor ou mais recente por meio de um DEX. Em contraste com as centrais centralizadas (CEXs), as plataformas descentralizadas não têm custódia, o que significa que um utilizador permanece no controle de suas chaves privadas ao fazer transações numa plataforma DEX.</li>
+                        <li>Gas Fees - Cada transação que ocorre dentro de uma blockchain tem um custo computacional necessário para executar operações específicas. As gas fees são a forma de pagar por essas transações.</li>
+                        <li>Staking - É basicamente colocar a criptomoeda a render juro durante o que poderá ser ou não um período fixo de tempo.</li>
+                        <li>NFT - NFT significa "token não fungível". Um NFT é basicamente um conjunto de dados armazenados ou contabilizados numa blockchain, sendo que esses dados representam algo específico. Um NFT pode, por exemplo, representar uma obra de arte, um álbum de música ou outros tipos de arquivos digitais. No jogo Cryptoblades, os NFTs são os seus personagens e armas jogáveis.</li>
+                       </ul>
+
                     </div>
                   </div>
-                  <div>
+                  </div>
 
-                <div class="container mt-sm-60 mt-30">
-                    <div class="hk-row">
 
-                        <!-- Navigation menu on the left -->
-                        <div class="col-xl-4">
-                            <div class="card">
+                </div><!-- End of Category 6-->
 
-                                <h6 class="card-header">Categorias</h6>
+      </div>
 
-                                <ul class="nav list-group list-group-flush" id="categories">
-
-                                    <li class="nav-item list-group-item d-flex align-items-center">
-
-                                        <a class="nav-link" href="#category1">Metamask e Skill</a>
-                                        <span class="badge badge-light badge-pill ml-15">02</span>
-                                    </li>
-
-                                    <li class="nav-item list-group-item d-flex align-items-center">
-
-                                        <a class="nav-link" href="#category2">Mecânica de Personagem</a>
-                                        <span class="badge badge-light badge-pill ml-15">03</span>
-                                    </li>
-
-                                    <li class="nav-item list-group-item d-flex align-items-center">
-
-                                        <a class="nav-link" href="#category3">Mecânicas de Batalha</a>
-                                        <span class="badge badge-light badge-pill ml-15">04</span>
-                                    </li>
-
-                                    <li class="nav-item list-group-item d-flex align-items-center">
-
-                                        <a class="nav-link" href="#category4">Mercado, Recompensas e Staking</a>
-                                        <span class="badge badge-light badge-pill ml-15">04</span>
-                                    </li>
-
-                                    <li class="nav-item list-group-item d-flex align-items-center">
-
-                                        <a class="nav-link" href="#category5">Erros Comuns</a>
-                                        <span class="badge badge-light badge-pill ml-15">01</span>
-                                    </li>
-
-                                    <li class="nav-item list-group-item d-flex align-items-center">
-
-                                        <a class="nav-link" href="#category6">Glossário e Conceitos-Chave</a>
-                                        <span class="badge badge-light badge-pill ml-15">01</span>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-
-                        <div class="col-xl-8 tab-content">
-                            <!-- Details for Category 1 -->
-                            <div class="card card-lg tab-pane fade show active" id="category1">
-                                <h3 class="card-header border-bottom-0">Metamask e Token Skill</h3>
-                                <div class="accordion accordion-type-2 accordion-flush" id="accordion_2">
-
-                                  <div class="card">
-                                      <div class="card-header d-flex justify-content-between activestate">
-                                          <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_1i" aria-expanded="false">Quanto preciso gastar para começar a jogar?</a>
-                                      </div>
-                                      <div id="collapse_1i" class="collapse show" data-parent="#accordion_2">
-                                          <div class="card-body pa-15">
-                                            Para começar a jogar Cryptoblades, você pode escolher uma das seguintes estratégias de compra:
-                                            <ol>
-                                              <p><li>Baixo orçamento (1,5 Skill) - Ótimo para começar. Se for a sua primeira vez no jogo, você pode recrutar um personagem + arma por 1,5 de Skill. Se você já recrutou antes, o recrutamento só lhe dará um novo personagem.</li>
-                                              <p><li>Marketplace (5-7 Skill) - Boa abordagem se você quiser economizar algum Skill nos personagens, que ficam a custar cerca de 0,5 Skill, e usar esse montante para comprar uma arma decente de 3/4 estrelas (cada uma vendida por cerca de 4-6 Skill).
-                                              <p> Lembre-se de que sua arma e seu personagem devem ser do mesmo Elemento para se obter máxima eficiência em batalha (mais sobre isso adiante).</li>
-                                              <p><li>Setup com vários personagens - Considerando que você pode ter até 4 personagens por conta e 4 contas, você pode ter no máximo 16 personagens. Portanto, basta multiplicar o orçamento inicial acima pelo número de personagens que você deseja ter (e como todos os personagens podem usar a mesma arma não é necessário comprar 4 armas!).
-                                                <p> Lembre-se ... quanto mais personagens você tiver, maior e mais rápido será o seu retorno.
-                                              </li>
-
-                                            <p><li>
-                                              Uma média de USD$0,22 é gasta por batalha, até um máximo de 7 batalhas por dia/personagem, o que significa um gasto diário de
-                                               USD$1,54 para um caractere ou USD$6,16 para 4 caracteres, por dia e assim por diante. Estes custos de gás são automaticamente pagos em BNB via wallet.
-                                            <p>
-                                              Cada personagem tem no máximo 200 stamina, e para fazer uma batalha é necessário consumir 40 stamina. A stamina
-                                              recupera a uma taxa de 1 ponto a cada 5 minutos, o que significa que a cada 3h20m é possível lutar novamente.
-                                              <p> Abaixo temos um cenário de simulação de potenciais ganhos mensais, para 1 conta com 4 personagens:
-                                                <figure>
-                                                  <br><br><img src="imgs/getting_started/roi.png" alt="ROI" style='height: 100%; width: 100%; object-fit: contain'><br><br>
-                                                  <figcaption>Fig.1 - Exemplo de retorno previsto para 1 conta com 4 personagens.</figcaption>
-                                                </figure>
-                                            </li>
-                                          </div>
-                                      </div>
-                                  </div>
-
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a role="button" data-toggle="collapse" href="#collapse_2i" aria-expanded="true">Como começar?</a>
-                                        </div>
-                                        <div id="collapse_2i" class="collapse" data-parent="#accordion_2" role="tabpanel">
-                                            <div class="card-body pa-15">
-                                              Para Cryptoblades você ira precisar de alguns tokens de Skill para gastar no jogo, e esses tokens podem ser comprados com BNB.
-
-                                                Para isso, basta seguir estas etapas:
-                                              <ol>
-                                                <p><li>Crie a sua conta na <a href="https://metamask.io/" target="_blank">Metamask</a> e instale a respetiva extensão no browser.</li></a>
-                                                <p><li>As carteiras Metamask, por predefinição, estão configuradas para a rede Ethereum, portanto, é necessário configurá-las para aceitarem também tokens BEP-20 (Binance). Para fazer isso, basta seguir
-                                                 <a href="https://docs.binance.org/smart-chain/wallet/metamask.html" target="_blank">estas instruções</a>.</li>
-                                                 <p>
-                                                O resultado final deverá mostrar algo como isto:
-                                                <figure>
-                                                  <br><br><img src="imgs/getting_started/bsc_metamask.png" alt="Metamask BSC"><br><br>
-                                                  <figcaption>Fig.2 - Binance Smart Chain corretamente configurada e disponível na Metamask.</figcaption>
-                                                </figure>
-
-                                                 <p><li>
-                                                  Crie uma conta Binance, adquira algum BNB ao fazer a troca do FIAT que depositou (ou troque por outra criptomoeda, como preferir) e retire a quantia que deseja para a sua carteira Metamask. Certifique-se de que copia o seu endereço corretamente!
-                                                  <figure>
-                                                    <br><br><img src="imgs/getting_started/metamask_address.png" alt="Metamask Address" style='height: 100%; width: 100%; object-fit: contain'><br><br>
-                                                    <figcaption>Fig.3 - Aqui é possível conferir e copiar o endereço da wallet no Metamask.</figcaption>
-                                                  </figure>
-                                                </li>
-                                                <p><li>
-                                                  Finalmente, é hora de trocar Skill na <a href="https://app.apeswap.finance/swap?outputCurrency=0x154a9f9cbd3449ad22fdae23044319d6ef2a1fab" target="_blank">Swap | ApeSwap</a> (que é uma Decentralized Exchange, ou DEX)
-                                                  por BNB para o que valor pretendido (e.g. fazer a troca de 2 BNB para 7 Skill).
-                                                  <p>Por exemplo, se você tem 2 BNB em sua carteira, troque cerca de 1,8 para $ Skill e deixe 0,2 BNB, o que deve ser suficiente para cerca de 2 semanas de jogo (para 1 conta com 4 personagens).
-                                                  <p><p>
-                                                  <figure>
-                                                    <br><br><img src="imgs/getting_started/apeswap.png" alt="Apeswap"><br><br>
-                                                    <figcaption>Fig.4 - Ecrã de troca (swap) de BNB por Skill.</figcaption>
-                                                  </figure>
-
-                                                  É muito importante ter em consideração que cada ação dentro do jogo (comprar personagem, vender arma, lutar, etc.) é uma transação no blockchain Binance, o que significa que é necessário deixar uma quantia de BNB na sua carteira Metamask para pagar as gas fees associadas, que são em média de USD$0,22 / transação.
-
-                                                  <br><br><figure>
-                                                    <img src="imgs/getting_started/transaction_examples.png" alt="Tx Example"><br><br>
-                                                    <figcaption>Fig.5 - Exemplo de uma lista de transacções.</figcaption>
-                                                  </figure><br><br>
-
-                                                  <p><p> Dica do amigo - antes de aprovar a sua transacção na BSC, altere o Gas Limit para 200000. Isto vai fazer com que pague metade do gas fee!
-
-                                                  <figure>
-                                                    <img src="imgs/getting_started/gas_fees.png" alt="Save Gas Fees"><br><br>
-                                                    <figcaption>Fig.6 - Não se esqueça de alterar o Gas Limit para poupar algum dinheiro!</figcaption>
-                                                  </figure><br><br>
-
-                                                  </li>
-                                                <p><li>
-                                                  É possível ter 4 personagens por conta no Metamask, até um máximo de 4 contas por carteira Metamask. Isso torna possível ter 16 personagens no jogo (4 personagens em cada 4 contas).
-                                                  <figure>
-                                                    <br><br><img src="imgs/getting_started/metamask_accounts.png" alt="Metamask Accounts"><br><br>
-                                                    <figcaption>Fig.7 - No ícone superior direito do ecrã principal da Metamask é possível consultar as contas existentes e criar novas contas.</figcaption>
-                                                  </figure>
-                                                  </li>
-                                                <p><li>
-                                                  Oh não! Acabei de fazer troca de BNB por Skill mas não vejo os novos tokens na minha carteira...e agora?
-                                                  <p>Calma, ainda falta adicionar o token da Cryptoblades através da opção "Add Token", na Metamask, através do <a href="https://www.coingecko.com/en/coins/cryptoblades" target="_blank">contract id</a>.</li>
-                                                  <figure>
-                                                    <br><br><img src="imgs/getting_started/add_token.png" alt="Add Token" style='height: 100%; width: 100%; object-fit: contain'><br><br>
-                                                    <figcaption>Fig.8 - Adicionar novos token na wallet Metamask.</figcaption>
-                                                  </figure>
-
-                                                  </li>
-                                              </ol>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div> <!-- End of details for Category 1 -->
-
-                            <!-- Details for Category 2 -->
-                            <div class="card card-lg tab-pane fade" id="category2">
-                                <h3 class="card-header border-bottom-0">Mecânica de Personagem</h3>
-                                <div class="accordion accordion-type-2 accordion-flush" id="accordion_2">
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_3i" aria-expanded="false">Como comprar personagens?</a>
-                                        </div>
-                                        <div id="collapse_3i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-                                              Depois de ter Skill suficiente na sua carteira virtual, você pode começar a jogar  <a href="https://app.cryptoblades.io/#/" target="_blank">Cryptoblades</a></li>.
-                                              <p> Assim que entrar no jogo, terá a opção de criar um personagem por algum valor Skill, e caso seja a sua primeira vez no jogo, irá receber o bónus de alguma campanha promocional disponível (por exemplo, poderá receber $30 em Skill para compras in-game, 5 Skill, etc ...). As promoções do jogo são pagas em saldo in-game, que só pode ser usado para forjar armas ou recrutar novos personagens.
-                                               <p> Outra alternativa é comprar diretamente no Marketplace (considerar isto com sendo uma compra de ativo de segunda mão). Uma maneira de otimizar os seus custos é criar o primeiro personagem no menu Plaza para ganhar seu saldo promocional no jogo e comprar quaisquer outros ativos diretamente do Marketplace. Certifique-se de que os seus personagens e armas são todos do mesmo elemento ... vamos falar em detalhe disso mais adiante.
-                                                <figure>
-                                                  <br><br><img src="imgs/char_mechanics/recruit_char.png" alt="Recruit Character" style='height: 100%; width: 100%; object-fit: contain'><br><br>
-                                                  <figcaption>Fig.9 - Recrutar novos personagens no menu Plaza.</figcaption>
-                                                </figure><br><br>
-
-                                                <figure>
-                                                  <br><br><img src="imgs/char_mechanics/forge_weapon.png" alt="Forge Weapon"><br><br>
-                                                  <figcaption>Fig.10 - Forjar uma nova arma no menu Blacksmith.</figcaption>
-                                                </figure><br><br>
-                                                <figure>
-                                                  <br><br><img src="imgs/char_mechanics/marketplace.png" alt="Marketplace" style='height: 100%; width: 100%; object-fit: contain'><br><br>
-                                                  <figcaption>Fig.11 - O Marketplace terá esta aparência.</figcaption>
-                                                </figure><br><br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_4i" aria-expanded="false">Com quantos personagens eu devo começar?</a>
-                                        </div>
-                                        <div id="collapse_4i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-                                              Existem 4 elementos no jogo: Água, Terra, Fogo e Elétrico. Cada elemento tem uma vantagem sobre o outro, conforme mostrado na imagem abaixo:
-                                              <figure>
-                                                <br><br><img src="imgs/char_mechanics/elements.png" alt="Game Elements"><br><br>
-                                                <figcaption>Fig.12 - Como cada elemento tem vantagem sobre outro.</figcaption>
-                                              </figure><br><br>
-
-                                              Se você escolher todos os personagens do mesmo elemento, poderá usar a mesma arma para todos, otimizando assim as suas chances de ganhar batalhas e seu custo / retorno. Quanto mais personagens você tiver, maior será o seu retorno. Abaixo está um exemplo da diferença entre ter 1 personagem ou 4 personagens por dia no nível 1 com uma arma de 4 estrelas, considerando a cotação de $ Skill de $ 34,96.
-                                              <figure>
-                                                <br><br><img src="imgs/char_mechanics/earnings_calc.png" alt="Earnings Calculator" style='height: 100%; width: 100%; object-fit: contain'><br><br>
-                                                <figcaption>Fig.13 - O simulador oficial do jogo para cálculo de ganhos.</figcaption>
-                                              </figure><br><br>
-
-                                              Cada personagem e arma é um NFT, portanto, ao verificar a sua carteira verá que existe um token com o nome CBC ou CBW. Se você tiver 4 personagens, irão aparecer 4 CBC. Se vender qualquer um dos seus personagens, os seus tokens CBC diminuem em 1 e o valor pelo qual foi vendido reverte para sua carteira como token Skill.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_5i" aria-expanded="false">Quanto de XP preciso para subir de nível?</a>
-                                        </div>
-                                        <div id="collapse_5i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-                                              É possível verificar a escada de níveis e XP <a href="https://docs.google.com/spreadsheets/d/1k3TZUTviY7DH7y4iqaVVuolHwi4GnGF7uudOxcLKUUc/edit#gid=0" target="_blank">aqui</a>.
-                                              Para evitar custos desnecessários, recomendo fazer o CLAIM de XP apenas quando os personagens tiverem XP suficiente para subir do nível 1 para 11, 11 para 21, 21 para 31, etc, porque apenas a cada 10 níveis seu poder aumenta em 1000, e cada 1000 de poder significa um bónus extra por vitória na batalha. Basta clicar no nome do seu personagem conforme mostrado abaixo para CLAIM XP para todos os personagens ao mesmo tempo. Novamente, para otimizar os gastos, certifique-se de que todos os personagens tenham XP suficiente para subir de nível para o próximo nível +10.
-                                              <figure>
-                                                <br><br><img src="imgs/char_mechanics/xp_bar.png" alt="XP Bar"><br><br>
-                                                <figcaption>Fig.14 - A barra de XP, onde poderá subir de nível os seus personagens. Lembre-se de que fazer CLAIM do seu XP aumentará o nível de todos os personagens!</figcaption>
-                                              </figure>
-
-                                              <figure>
-                                                <br><br><img src="imgs/char_mechanics/power.png" alt="Power"><br><br>
-                                                <figcaption>Fig.15 - Power de cada personagem.</figcaption>
-                                              </figure><br><br>
-
-                                              O poder do seu inimigo será dimensionado de acordo com o seu poder + arma. Ao fazer CLAIM da XP e subir de nível, o seu personagem ficará mais forte, mas os seus inimigos também. O mesmo se aplica se você comprar uma arma melhor.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div> <!-- End of details for Category 2 -->
-
-                            <!-- Details for Category 3 -->
-                            <div class="card card-lg tab-pane fade" id="category3">
-                                <h3 class="card-header border-bottom-0">Mecânicas de Batalha</h3>
-                                <div class="accordion accordion-type-2 accordion-flush" id="accordion_2">
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_6i" aria-expanded="false">Como posso otimizar as minhas batalhas?</a>
-                                        </div>
-                                        <div id="collapse_6i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-                                              Quando fizer uma batalha, você irá escolher o seu personagem e a sua arma. Depois, serão apresentados 4 inimigos com poder e elemento aleatórios. A XP que cada combate dá varia entre 28 e 34, dependendo da dificuldade da luta.
-                                              <figure>
-                                                <img src="imgs/battle_mechanics/choose_weapon.png" alt="XP Bar"><br><br>
-                                                <figcaption>Fig.16 - Escolha a arma com que vai lutar. Lembre-se de juntar armas e personagens do mesmo elemento!</figcaption>
-                                              </figure>
-
-                                              <figure>
-                                                <img src="imgs/battle_mechanics/battle.png" alt="Power"  style='height: 100%; width: 100%; object-fit: contain'><br><br>
-                                                <figcaption>Fig.17 - Hora da porrada!!</figcaption>
-                                              </figure><br><br>
-
-                                              <p>Cada batalha é uma transação na BSC, com um custo médio do gás de US$0,22. A gas fee é constante, independentemente do resultado da batalha, então você irá sempre gastar $0,22, quer ganhe ou não. É mais lucrativo escolher sempre as batalhas com maior chance de vitória e não necessariamente aquelas com maior retorno de XP.
-                                              <p>
-                                                Utilize este <a href="https://wax-dapps.site/crypto-blades/combat" target="_blank">simulador</a> para ter uma ideia da estimativa de percentagem de vitória ou derrota de cada batalha. Se a sua arma não tiver Weapon Bonus Power ou Stat 3 power, coloque o valor em 0.
-                                                <p> Se os 4 inimigos gerados forem muito fortes ou você não tiver uma boa chance de vitória, espere até a próxima hora passar para que novos (e potencialmente mais acessíveis) inimigos sejam aleatoriamente gerados e listados (por exemplo, são 14h30, os 4 inimigos gerados colocam-me em combates que não me favorecem e a chance de ganhar é inferior a 90%. É só esperar até as 15h e 4 novos combates estarão disponíveis). É recomendável escolher batalhas com chance de vitória maior do que 90%, para maior lucratividade.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_7i" aria-expanded="false">Que arma devo escolher para a batalha?</a>
-                                        </div>
-                                        <div id="collapse_7i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-                                              Para otimizar o seu poder de combate, o personagem e a arma devem ser do mesmo elemento. Se passar o cursor sobre a arma, verá as suas estatísticas completas.
-                                               <p> No exemplo abaixo, vemos que o elemento é terra e tem atributos extras de DEX (terra) e STR (fogo). O seu poder de batalha aumentará se a arma em questão tiver qualquer um dos atributos que sejam o mesmo que o elemento da arma e do seu personagem.
-
-                                              <figure>
-                                                <img src="imgs/battle_mechanics/weapon_1.png" alt="Weapon"><br><br>
-                                                <figcaption>Fig.18 - Exemplo para uma arma Terra de 4 estrelas.</figcaption>
-                                              </figure><br><br>
-
-                                              <p>O poder do seu inimigo terá um valor aleatório baseado em quanto poder o seu personagem tem, então se o seu personagem usar uma arma mais forte, o inimigo gerado será mais forte mas sua recompensa também será melhor.
-                                              <p>
-                                              O algoritmo que calcula o poder do seu personagem é basedo na seguinte formula:
-                                              <figure>
-                                                <img src="imgs/battle_mechanics/combat_formula.png" alt="Battle Formula"><br><br>
-                                                <figcaption>Fig.19 - Este é  algoritmo que determina a sua chance de vitória.</figcaption>
-                                              </figure><br><br>
-                                              <p>
-                                              Por outras palavras, é muito importante que o par arma + personagem representem o mesmo elemento. Se um dos atributos da arma também for do mesmo elemento, será multiplicado por 1,07, caso contrário, será multiplicado por 1.
-                                              <p>
-                                              Para uma arma de 4 estrelas que possua 2 atributos, garanta que tem o mesmo atributo da arma com um valor o mais alto possível. Como a potência multiplica por 1,03 e qualquer elemento diferente do seu será multiplicado por 1, procure aquele com o maior valor e o melhor preço (por exemplo, 300 potência x 1,03 = 309 e 300 fogo x 1 = 300, então eles terão o mesmo impacto se o atributo de fogo for 309, para este exemplo).
-                                              <p>
-                                              A mesma fórmula aplica-se a armas de 3 estrelas e armas de 5 estrelas, que têm 1 e 3 atributos, respectivamente.
-                                              <p>
-                                              Para forjar uma arma, vá até ao menu Blacksmith e clique em Forge. O custo é de 0,22 Skill e qualquer arma de 1 a 5 estrelas pode vir com as seguintes probabilidades:
-                                              <figure>
-                                                <img src="imgs/battle_mechanics/forge_percentages.png" alt="Forge Percentages"><br><br>
-                                                <figcaption>Fig.20 - Probabilidades de se obter uma arma.</figcaption>
-                                              </figure><br><br>
-                                              <p>
-                                              Assim, você pode gastar dinheiro forjando a sua própria e tentar a sorte ou então ir ao Marketplace e comprar alguma arma mais cara, mas que seja adequada ao seu personagem.
-                                              <p>
-                                              Cada arma é um NFT, e ao abrir a sua carteira verá que tem um token chamado CBW. Se você tiver 4 armas, irão aparecer 4 CBW. Caso venda uma arma, ficará com 3 CBW e a quantia pela qual ela for vendida será revertida em Skill, na sua wallet.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_8i" aria-expanded="false">Tenho uma arma de 3 estrelas, devo comprar uma de 4 estrelas?</a>
-                                        </div>
-                                        <div id="collapse_8i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-                                            Para saber se vale a pena ou não, terá de fazer algumas simulações usando a "Earnings Calculator" do jogo, que simula os ganhos no jogo utilizando uma arma de 3 estrelas, e compará-lo com o que você ganharia por uma 4 estrelas arma.
-
-                                            <figure>
-                                              <img src="imgs/battle_mechanics/milestone.png" alt="Milestone"><br><br>
-                                              <figcaption>Fig.21 - Rendimento extra previsto para o próximo milestone level (que é a cada 10 níveis).</figcaption>
-                                            </figure><br><br>
-
-                                            Abaixo é apresentada uma simulação, onde é possível verificar um lucro estimado de $144,27 caso todos os combates sejam ganhos. <p>
-
-                                            <figure>
-                                              <img src="imgs/battle_mechanics/earnings_calc2.png" alt="Earnings Calculator 2" style='height: 100%; width: 100%; object-fit: contain'><br><br>
-                                              <figcaption>Fig.22 - Exemplo de simulação combatendo com uma arma de 3 estrelas com o mesmo elemento e atributo extra do personagem (neste caso, INT).</figcaption>
-                                            </figure><br><br>
-
-                                            Para saber se vale a pena comprar uma arma 4 estrelas, repita a simulação e veja quanto mais ficará a ganhar por dia.
-                                            <p> Neste exemplo, temos um lucro estimado de $ 161,96, caso todas as partidas diárias sejam ganhas, o que levará a um aumento de $17,69 no lucro. Tenha em consideração, por exemplo, que uma arma de 4 estrelas custa em média 7 Skill, que na taxa de conversão atual seria em torno de $315,98, e que esse valor seria devolvido com ganhos em cerca de 17 dias. Porém, e dado que a quantidade de recompensa por batalha deve aumentar com as subidas de nível, o break-even poderá até chegar mais cedo do que o previsto.
-
-                                            <figure>
-                                              <img src="imgs/battle_mechanics/earnings_calc3.png" alt="Earnings Calculator 3" style='height: 100%; width: 100%; object-fit: contain'><br><br>
-                                              <figcaption>Fig.23 - Mesma simulação para uma arma de 4 estrelas.</figcaption>
-                                            </figure>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_9i" aria-expanded="false">Como posso melhorar a minha arma?</a>
-                                        </div>
-                                        <div id="collapse_9i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-                                              Para melhorar uma arma, é possível reforjar uma arma mais fraca para otimizar qualquer outra arma de sua preferência. Para isso, basta clicar na arma que deseja melhorar, clicar em Reforjar e escolher a arma que deseja destruir. A arma escolhida será destruída para que a arma de sua escolha receba um aumento de poder, que aparecerá em Bonus Power.
-                                              <p>
-                                              Cada arma tem até 100 pontos LB a serem adicionados para armas de 1 a 3 estrelas. Cada arma de 1 estrela e 2 estrelas que será destruída adiciona 1 LB, e uma arma de 3 estrelas adiciona 2 LB. Cada LB adiciona 15 pontos de poder à arma, até um total de 1500 bônus de poder. Uma arma de 4 estrelas, quando destruída para melhorar uma nova arma, pode render até 25 4LB, e cada 4LB adiciona 30 pontos até um total de 750 de poder de bônus. Uma arma de 5 estrelas, quando destruída para melhorar uma nova arma, pode render até 10 5LB, e cada 5LB adiciona 60 pontos até um total de 600 de bônus de poder.
-                                              <figure>
-                                                <img src="imgs/battle_mechanics/reforge.png" alt="Refoge" style='height: 100%; width: 100%; object-fit: contain'><br><br>
-                                                <figcaption>Fig.24 - O ecrã de Reforge.</figcaption>
-                                              </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div> <!-- End of details for Category 3 -->
-
-                            <!-- Details for Category 4 -->
-                            <div class="card card-lg tab-pane fade" id="category4">
-                                <h3 class="card-header border-bottom-0">Mercado, Recompensas e Staking</h3>
-                                <div class="accordion accordion-type-2 accordion-flush" id="accordion_2">
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_10i" aria-expanded="false">Como gerir minha SKILL no balanço e recompensas?</a>
-                                        </div>
-                                        <div id="collapse_10i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-                                              O montante que você comprar em SKILL através do APESWAP vai ficar no Total Balance. Entretanto também temos os montantes SKILL IN GAME, que são os valores que pode ganhar fazendo o STAKE do valor que vai receber por cada batalha e do qual ainda não foi feito o CLAIM.
-                                              <br><br><img src="imgs/total_balance.png" alt="Total Balance"><br><br>
-                                              Para todas as batalhas que vencer, este montante de recompensa vai ser aumentado. Esse montante não pode ser utilizado para compra ou venda até ser feito o CLAIM do seu valor.
-                                              <br><br><img src="imgs/rewards.png" alt="Rewards"><br><br>
-                                              Caso queira retirar esse montante, vai ter de pagar uma taxa inicial de 15%, que vai diminuindo 1% a cada dia. De forma a maximizar o retorno, deverá fazer levantamentos de 2 em 2 semanas, para não pagar taxa.
-                                              <p>
-                                              Uma outra alternativa é fazer o STAKE por 7 dias de algum desses montantes e receber 10% IN GAME SKILL, que fica disponível de imediato. O valor que colocar no STAKE não pode ser utilizado nesses 7 dias, e apenas poderá fazer STAKE do montante de Skill que tem em Rewards e não o que tem balance!
-                                              <br><br><img src="imgs/staking.png" alt="Staking"><br><br>
-                                              Para isso basta selecionar a opção do meio “SKILL FOR SKILL” e depois colocar em “STAKE ALL OF UNCLAIMED REWARDS”
-                                              <br><br><img src="imgs/staking_2.png" alt="Staking"><br><br>
-                                              A partir do primeiro STAKE vai ser contado os 7 dias de bloqueio. É aconselhável apenas fazer mais um STAKE no último dia da contagem para economizar gas fees (e.g. fiz o STAKE desses 10.58 SKILL agora, um contador de 7 dias vai começar. No dia seguinte tenho mais 4 SKILL para fazer CLAIM e quero ganhar +10% de SKILL IN GAME. Não é preciso fazer o STAKE neste momento, o melhor é juntar pelos próximos 6 dias e fazer mais um único aporte de STAKE de uma única vez. O relógio de contagem de 7 dias não vai ser zerado, é sempre 7 dias a partir do primeiro STAKE que foi feito).
-                                              <p>
-                                              Depois desses 7 dias, ao fazer UNSTAKE todo esse montante vai direto para seu BALANCE sem pagar nenhuma taxa.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_11i" aria-expanded="false">Por quanto vendo uma arma?</a>
-                                        </div>
-                                        <div id="collapse_11i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-                                              A melhor forma de saber isso é indo ao Marketplace e procurando por armas que sejam parecidas com a sua, pois os valores vão ser alterados de acordo com oferta e demanda.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_12i" aria-expanded="false">Como vender uma arma?</a>
-                                        </div>
-                                        <div id="collapse_12i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-                                              Para vender uma arma tens de ir ao mercado e clicar em List NFTs. Depois disso basta clicar na arma que queira vender e colocar o valor Ex: 3.50 (Não pode usar vírgula). Caso queira alterar o valor ou cancelar a venda, basta ir em Search NFTs e colocar o ID da sua arma (apenas o número). Caso não saiba o ID basta ir no <a href="https://bscscan.com/">BSCScan</a>, colocar o seu endereço e por em CBW que vai ter todas as suas armas.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_13i" aria-expanded="false">Posso enviar arma ou personagem para outra conta minha ou de um amigo?</a>
-                                        </div>
-                                        <div id="collapse_13i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-                                              Sim, basta utilizar <a href="https://www.bscscan.com/address/0xc6f252c2cdd4087e30608a35c022ce490b58179b#writeProxyContract">esse link</a> e clicar no Connect to web3 para fazer a ligação com sua carteira.
-                                              <br><br><img src="imgs/web3_connect.png" alt="Web 3 Connect"><br><br>
-                                              Depois disso basta ir ao formulário 12 e colocar o endereço de quem está enviando o personagem, o endereço de quem vai receber, e por fim o ID do personagem que você quer enviar. Para funcionar, a carteira que vai estar conectada a esse site tem de ser a conta do personagem na Metamask. Importante ter em consideração que cada conta pode ter, no máximo, 4 personagens, logo, se for feito o envio de um personagem para uma conta que ja esteja cheia, esse NFT ficará perdido para sempre. Também ter em atenção se o personagem em questão não está bloqueado para transferência pelo período de 24 horas.
-                                              <p>
-                                              Para transferir arma o <a href="https://www.bscscan.com/address/0x7e091b0a220356b157131c831258a9c98ac8031a#writeProxyContract">link é esse</a> e o formulário é o 13 e é preciso pôr o seu endereço, o endereço de quem vai receber e o ID da arma. Também ter em atenção se a arma em questão não está bloqueada para transferência pelo período de 24 horas.
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div> <!-- End of details for Category 4 -->
-
-                            <!-- Details for Category 5 -->
-                            <div class="card card-lg tab-pane fade" id="category5">
-                                <h3 class="card-header border-bottom-0">Erros Comuns</h3>
-                                <div class="accordion accordion-type-2 accordion-flush" id="accordion_2">
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_14i" aria-expanded="false">Obtive um erro durante a transação, que devo fazer?</a>
-                                        </div>
-                                        <div id="collapse_14i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-
-                                              Caso apareça essa mensagem, cancele a transação porque algo de errado aconteceu.
-
-                                              <figure>
-                                                <img src="imgs/common_errors/tx_error.png" alt="Transaction Error"><br><br>
-                                                <figcaption>Fig.30 - Cuidado, não é suposto pagar tanto for gas fees...</figcaption>
-                                              </figure><br><br>
-
-                                              <p>Esse erro pode acontecer por vários motivos:
-                                              <p>
-                                                <ul>
-                                                  <li>Está a tentar comprar um personagem ou arma que já foi comprada no marketplace</li>
-                                                  <li>Está a tentar transferir personagem ou arma e colocar erradamente o ID </li>
-                                                  <li>Está a tentar transferir de uma carteira que não seja sua</li>
-                                                  <li>Está a tentar vender uma arma ou personagem num período menor de 24 horas depois de ter comprado</li>
-                                                </ul>
-                                                <p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div> <!-- End of details for Category 5 -->
-
-                            <!-- Details for Category 6 -->
-                            <div class="card card-lg tab-pane fade" id="category6">
-                                <h3 class="card-header border-bottom-0">Glossário e Conceitos-Chave</h3>
-                                <div class="accordion accordion-type-2 accordion-flush" id="accordion_2">
-                                    <div class="card">
-                                        <div class="card-header d-flex justify-content-between">
-                                            <a class="collapsed" role="button" data-toggle="collapse" href="#collapse_15i" aria-expanded="false">Glossary and Key Concepts</a>
-                                        </div>
-                                        <div id="collapse_15i" class="collapse" data-parent="#accordion_2">
-                                            <div class="card-body pa-15">
-
-                                                <ul>
-                                                  <li>Wallet - A wallet é um endereço online seguro onde todas as suas criptomoedas serão armazenadas. Para jogar Cryptoblades, precisará de ter em carteira BNB (a criptomoeda usada para pagar as gas fees na Binance Smart Chain) e de Skill (a moeda do jogo).</li>
-                                                  <li>Fiat - Moeda emitida por governos centrais (e.g. Euro, USD, BRL, etc..)</li>
-                                                  <li>Metamask - Ferramenta que permite aos utilizadores armazenar e gerenciar chaves de contas, transmitir transações, enviar e receber criptomoedas e tokens baseados em blockchain, assim como conectar-se com segurança a aplicativos descentralizados por meio de um browser compatível ou do browser integrado do aplicativo móvel.</li>
-                                                  <li>Binance Smart Chain (BSC) - Implementação Blockchain da Binance, onde ocorrerão todas as transações entre os endereços de wallets.</li>
-                                                  <li>Decentralized Exchange (DEX) - Uma Decentralized Exchange é um mercado ponto a ponto (P2P) que conecta compradores e vendedores de criptomoedas. O que isso significa é que você pode trocar / comprar uma criptomoeda amplamente usada por outra que foi registada por, digamos, outra emitida por uma entidade menor ou mais recente por meio de um DEX. Em contraste com as centrais centralizadas (CEXs), as plataformas descentralizadas não têm custódia, o que significa que um utilizador permanece no controle de suas chaves privadas ao fazer transações numa plataforma DEX.</li>
-                                                  <li>Gas Fees - Cada transação que ocorre dentro de uma blockchain tem um custo computacional necessário para executar operações específicas. As gas fees são a forma de pagar por essas transações.</li>
-                                                  <li>Staking - É basicamente colocar a criptomoeda a render juro durante o que poderá ser ou não um período fixo de tempo.</li>
-                                                  <li>NFT - NFT significa "token não fungível". Um NFT é basicamente um conjunto de dados armazenados ou contabilizados numa blockchain, sendo que esses dados representam algo específico. Um NFT pode, por exemplo, representar uma obra de arte, um álbum de música ou outros tipos de arquivos digitais. No jogo Cryptoblades, os NFTs são os seus personagens e armas jogáveis.</li>
-                                                 </ul>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div> <!-- End of details for Category 6 -->
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /Row -->
-    </div>
-  </body>
+		</div>
+	</div>
+</div>
+</body>
 </html>
